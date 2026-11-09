@@ -1,0 +1,29 @@
+{
+  "name": "naseej-game",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "NASEEJ — a premium minimalist geometric symmetry puzzle game",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cap:sync": "npm run build && cap sync android",
+    "cap:android": "cap open android",
+    "android:debug": "bash ./scripts/build-android.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
+    "@types/node": "^22.15.30",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
+  }
+}
